@@ -12,58 +12,6 @@ class CustomStyle with Diagnosticable implements TextStyle {
   TextStyle get style => baseStyle ?? const TextStyle();
 
   @override
-  TextStyle apply(
-      {Color? color,
-      Color? backgroundColor,
-      TextDecoration? decoration,
-      Color? decorationColor,
-      TextDecorationStyle? decorationStyle,
-      double decorationThicknessFactor = 1.0,
-      double decorationThicknessDelta = 0.0,
-      String? fontFamily,
-      List<String>? fontFamilyFallback,
-      double fontSizeFactor = 1.0,
-      double fontSizeDelta = 0.0,
-      int fontWeightDelta = 0,
-      FontStyle? fontStyle,
-      double letterSpacingFactor = 1.0,
-      double letterSpacingDelta = 0.0,
-      double wordSpacingFactor = 1.0,
-      double wordSpacingDelta = 0.0,
-      double heightFactor = 1.0,
-      double heightDelta = 0.0,
-      TextBaseline? textBaseline,
-      Locale? locale,
-      List<Shadow>? shadows,
-      List<ui.FontFeature>? fontFeatures}) {
-    return style.apply(
-      color: color,
-      backgroundColor: backgroundColor,
-      decoration: decoration,
-      decorationColor: decorationColor,
-      decorationStyle: decorationStyle,
-      decorationThicknessFactor: decorationThicknessFactor,
-      decorationThicknessDelta: decorationThicknessDelta,
-      fontFamily: fontFamily,
-      fontFamilyFallback: fontFamilyFallback,
-      fontSizeFactor: fontSizeFactor,
-      fontSizeDelta: fontSizeDelta,
-      fontWeightDelta: fontWeightDelta,
-      fontStyle: fontStyle,
-      letterSpacingFactor: letterSpacingFactor,
-      letterSpacingDelta: letterSpacingDelta,
-      wordSpacingFactor: wordSpacingFactor,
-      wordSpacingDelta: wordSpacingDelta,
-      heightFactor: heightFactor,
-      heightDelta: heightDelta,
-      textBaseline: textBaseline,
-      locale: locale,
-      shadows: shadows,
-      fontFeatures: fontFeatures,
-    );
-  }
-
-  @override
   Paint? get background => style.background;
 
   @override
@@ -75,56 +23,6 @@ class CustomStyle with Diagnosticable implements TextStyle {
   @override
   RenderComparison compareTo(TextStyle other) {
     return style.compareTo(other);
-  }
-
-  @override
-  TextStyle copyWith(
-      {bool? inherit,
-      Color? color,
-      Color? backgroundColor,
-      String? fontFamily,
-      List<String>? fontFamilyFallback,
-      double? fontSize,
-      FontWeight? fontWeight,
-      FontStyle? fontStyle,
-      double? letterSpacing,
-      double? wordSpacing,
-      TextBaseline? textBaseline,
-      double? height,
-      Locale? locale,
-      Paint? foreground,
-      Paint? background,
-      List<Shadow>? shadows,
-      List<ui.FontFeature>? fontFeatures,
-      TextDecoration? decoration,
-      Color? decorationColor,
-      TextDecorationStyle? decorationStyle,
-      double? decorationThickness,
-      String? debugLabel}) {
-    return style.copyWith(
-      inherit: inherit,
-      color: color,
-      backgroundColor: backgroundColor,
-      fontFamily: fontFamily,
-      fontFamilyFallback: fontFamilyFallback,
-      fontSize: fontSize,
-      fontWeight: fontWeight,
-      fontStyle: fontStyle,
-      letterSpacing: letterSpacing,
-      wordSpacing: wordSpacing,
-      textBaseline: textBaseline,
-      height: height,
-      locale: locale,
-      foreground: foreground,
-      background: background,
-      shadows: shadows,
-      fontFeatures: fontFeatures,
-      decoration: decoration,
-      decorationColor: decorationColor,
-      decorationStyle: decorationStyle,
-      decorationThickness: decorationThickness,
-      debugLabel: debugLabel,
-    );
   }
 
   @override
@@ -232,4 +130,113 @@ class CustomStyle with Diagnosticable implements TextStyle {
 
   @override
   double? get wordSpacing => style.wordSpacing;
+
+  @override
+  TextStyle apply(
+      {Color? color,
+      Color? backgroundColor,
+      TextDecoration? decoration,
+      Color? decorationColor,
+      TextDecorationStyle? decorationStyle,
+      double decorationThicknessFactor = 1.0,
+      double decorationThicknessDelta = 0.0,
+      String? fontFamily,
+      List<String>? fontFamilyFallback,
+      double fontSizeFactor = 1.0,
+      double fontSizeDelta = 0.0,
+      int fontWeightDelta = 0,
+      FontStyle? fontStyle,
+      double letterSpacingFactor = 1.0,
+      double letterSpacingDelta = 0.0,
+      double wordSpacingFactor = 1.0,
+      double wordSpacingDelta = 0.0,
+      double heightFactor = 1.0,
+      double heightDelta = 0.0,
+      TextBaseline? textBaseline,
+      TextLeadingDistribution? leadingDistribution,
+      Locale? locale,
+      List<Shadow>? shadows,
+      List<ui.FontFeature>? fontFeatures}) {
+    return style.apply(
+      color: color,
+      backgroundColor: backgroundColor,
+      decoration: decoration,
+      decorationColor: decorationColor,
+      decorationStyle: decorationStyle,
+      decorationThicknessFactor: decorationThicknessFactor,
+      decorationThicknessDelta: decorationThicknessDelta,
+      fontFamily: fontFamily,
+      fontFamilyFallback: fontFamilyFallback,
+      fontSizeFactor: fontSizeFactor,
+      fontSizeDelta: fontSizeDelta,
+      fontWeightDelta: fontWeightDelta,
+      fontStyle: fontStyle,
+      letterSpacingFactor: letterSpacingFactor,
+      letterSpacingDelta: letterSpacingDelta,
+      wordSpacingFactor: wordSpacingFactor,
+      wordSpacingDelta: wordSpacingDelta,
+      heightFactor: heightFactor,
+      heightDelta: heightDelta,
+      textBaseline: textBaseline,
+      locale: locale,
+      shadows: shadows,
+      fontFeatures: fontFeatures,
+    );
+  }
+
+  @override
+  TextStyle copyWith(
+      {bool? inherit,
+      Color? color,
+      Color? backgroundColor,
+      String? fontFamily,
+      List<String>? fontFamilyFallback,
+      double? fontSize,
+      FontWeight? fontWeight,
+      FontStyle? fontStyle,
+      double? letterSpacing,
+      double? wordSpacing,
+      TextBaseline? textBaseline,
+      double? height,
+      TextLeadingDistribution? leadingDistribution,
+      Locale? locale,
+      Paint? foreground,
+      Paint? background,
+      List<Shadow>? shadows,
+      List<ui.FontFeature>? fontFeatures,
+      TextDecoration? decoration,
+      Color? decorationColor,
+      TextDecorationStyle? decorationStyle,
+      double? decorationThickness,
+      String? debugLabel}) {
+    return style.copyWith(
+      inherit: inherit,
+      color: color,
+      backgroundColor: backgroundColor,
+      fontFamily: fontFamily,
+      fontFamilyFallback: fontFamilyFallback,
+      fontSize: fontSize,
+      fontWeight: fontWeight,
+      fontStyle: fontStyle,
+      letterSpacing: letterSpacing,
+      wordSpacing: wordSpacing,
+      textBaseline: textBaseline,
+      height: height,
+      locale: locale,
+      foreground: foreground,
+      background: background,
+      shadows: shadows,
+      fontFeatures: fontFeatures,
+      decoration: decoration,
+      decorationColor: decorationColor,
+      decorationStyle: decorationStyle,
+      decorationThickness: decorationThickness,
+      debugLabel: debugLabel,
+    );
+  }
+
+  @override
+  // TODO: implement leadingDistribution
+  TextLeadingDistribution? get leadingDistribution =>
+      style.leadingDistribution;
 }
